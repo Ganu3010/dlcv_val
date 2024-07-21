@@ -3,8 +3,8 @@ from main import sample_Unet_DDPM
 
 if __name__=='__main__':
 
-    model_path = 'model_1K_8e-6/unet_800.pt'
-    sample_dir = 'model_1K_8e-5/samples/'
+    model_path = 'model_5K_4e-5/unet_4200.pt'
+    sample_dir = 'model_5K_4e-5/samples/'
 
     sample_Unet_DDPM(model_path = model_path, output_path=sample_dir, batch_size = 4)
 
