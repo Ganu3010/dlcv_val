@@ -15,9 +15,8 @@
 
 ### Sample Generated Motion
 ![motion sample_1](./model_1K_8e-5/samples/sample_2.gif)
-- One of the samples from an experimental trained model. <br>
+
 ![motion_sample_2](./model_5K_4e-5/samples/sample_3.gif)
-- Another generated sample from experimental trained model. <br>
 
 ### References
 - The project follows [SinMDM](https://sinmdm.github.io/SinMDM-page/) paper from ICLR 2024.
