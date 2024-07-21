@@ -6,14 +6,8 @@
 
 ### How to use this code
 
-- Use the sampler.py file to create training images in
-```
-dataset/images.npy
-```
-sampled from 
-```
-data/
-```
+- Use the sampler.py file to create training images in `dataset/images.npy` sampled from `data/uptown_funk.json`
+
 . The sampler uses parameters N, WINDOW, save_path, data_path and seed to set the number of images, the size of each image, the save path, data path and the random_seed of the dataset sample. 
 - The get_meta_data() function is used to get the scaler information for data sample.
 - Use the main.py file to train UNet model. The model hyperparameters can be set in the train_Unet_DDPM() functions.
