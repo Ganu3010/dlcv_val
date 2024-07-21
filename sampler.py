@@ -2,8 +2,8 @@ import numpy as np
 import pandas as pd
 from renderer import *
 
-def create_sample(N, WINDOW, save_path, data = 'data/uptown_funk.json', seed = 42):
-    var = load_keypoints(data)
+def create_sample(N, WINDOW, save_path, data_path = 'data/uptown_funk.json', seed = 42):                # Function to generate random samples. 
+    var = load_keypoints(data_path)
     var = dict(var)
     df = pd.DataFrame.from_dict(var)
     fdf = pd.DataFrame()
@@ -26,7 +26,7 @@ def create_sample(N, WINDOW, save_path, data = 'data/uptown_funk.json', seed = 4
 
 
 
-def get_meta_data(data = 'data/uptown_funk.json'):
+def get_meta_data(data = 'data/uptown_funk.json'):                                                      # Function to get scaling data of 2D matrices. 
     var = load_keypoints(data)
     var = dict(var)
     df = pd.DataFrame.from_dict(var)
