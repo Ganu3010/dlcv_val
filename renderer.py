@@ -44,14 +44,14 @@ def render_seq(landmark_seq, gif_save_path):
     img_renders = []
     n_frames = len(landmark_seq['right_shoulder'])
 
-    print("len landmarks: {}".format(len(landmark_seq['right_knee'])))
+    # print("len landmarks: {}".format(len(landmark_seq['right_knee'])))
     for idx in range(0, n_frames):
         img = np.ones((img_size, img_size, 3)) * 192 
         plot_landmarks(img, landmark_seq, idx)
         img = img.astype(np.uint8)
         img_renders.append(Image.fromarray(img))
 
-    print("processed img render len: {}".format(len(img_renders)))
+    # print("processed img render len: {}".format(len(img_renders)))
     imageio.mimsave(gif_save_path, img_renders, fps=10)
 
 # This function will load the keypoints for the video given the path for the keypoints 

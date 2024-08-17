@@ -50,7 +50,7 @@ def sample_Unet_DDPM(model_path, output_path, image_size = 64, batch_size = 1): 
     if not os.path.exists(output_path):
         os.mkdir(output_path)
     model = Unet(
-        dim = 64,
+        dim = image_size,
         dim_mults = (1, 2),
         flash_attn = True, 
         channels=2
@@ -75,5 +75,4 @@ def sample_Unet_DDPM(model_path, output_path, image_size = 64, batch_size = 1): 
 
 
 if __name__=='__main__':
-
-    train_Unet_DDPM(100, 8e-5, 'model_trial', 'dataset/images.npy', chkpt=10)           # Example of training UNet. 
+    train_Unet_DDPM(1000, 8e-6, 'model_trial', 'dataset/images.npy', chkpt=100)           # Example of training UNet. 

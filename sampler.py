@@ -23,6 +23,7 @@ def create_sample(N, WINDOW, save_path, data_path = 'data/uptown_funk.json', see
     images = np.array(samples).reshape(N, 2, WINDOW, len(df.columns)).astype(np.float32)
 
     np.save(save_path, images)
+    print("Images saved at: ", save_path)
 
 
 
@@ -41,3 +42,6 @@ def get_meta_data(data = 'data/uptown_funk.json'):                              
         data[col] = {'min': min(fdf[col]), 'diff': max(fdf[col]) - min(fdf[col])}
         fdf[col] = (fdf[col] - min(fdf[col]))/(max(fdf[col]) - min(fdf[col]))   
     return data, df.columns
+
+if __name__=='__main__':
+    create_sample(N = 10, WINDOW = 128, save_path='dataset/new_data.npy')
